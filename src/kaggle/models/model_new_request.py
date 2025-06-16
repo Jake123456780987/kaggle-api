@@ -30,29 +30,40 @@ class ModelNewRequest(object):
       attribute_map (dict): The key is attribute name
                             and the value is json key in definition.
     """
+
     project_types = {
-        'owner_slug': 'str',
-        'slug': 'str',
-        'title': 'str',
-        'subtitle': 'str',
-        'is_private': 'bool',
-        'description': 'str',
-        'publish_time': 'date',
-        'provenance_sources': 'str'
+        "owner_slug": "str",
+        "slug": "str",
+        "title": "str",
+        "subtitle": "str",
+        "is_private": "bool",
+        "description": "str",
+        "publish_time": "date",
+        "provenance_sources": "str",
     }
 
     attribute_map = {
-        'owner_slug': 'ownerSlug',
-        'slug': 'slug',
-        'title': 'title',
-        'subtitle': 'subtitle',
-        'is_private': 'isPrivate',
-        'description': 'description',
-        'publish_time': 'publishTime',
-        'provenance_sources': 'provenanceSources'
+        "owner_slug": "ownerSlug",
+        "slug": "slug",
+        "title": "title",
+        "subtitle": "subtitle",
+        "is_private": "isPrivate",
+        "description": "description",
+        "publish_time": "publishTime",
+        "provenance_sources": "provenanceSources",
     }
 
-    def __init__(self, owner_slug=None, slug=None, title=None, subtitle=None, is_private=True, description='', publish_time=None, provenance_sources=''):  # noqa: E501
+    def __init__(
+        self,
+        owner_slug=None,
+        slug=None,
+        title=None,
+        subtitle=None,
+        is_private=True,
+        description="",
+        publish_time=None,
+        provenance_sources="",
+    ):  # noqa: E501
 
         self._owner_slug = None
         self._slug = None
@@ -79,7 +90,7 @@ class ModelNewRequest(object):
 
     @property
     def owner_slug(self):
-        """Gets the owner_slug of this ModelNewRequest.  # noqa: E501
+        """Gets the owner_slug of this ModelNewRequest.  # noqa: E501.
 
         The owner's slug  # noqa: E501
 
@@ -94,7 +105,8 @@ class ModelNewRequest(object):
 
         The owner's slug  # noqa: E501
 
-        :param owner_slug: The owner_slug of this ModelNewRequest.  # noqa: E501
+        :param owner_slug: The owner_slug of this ModelNewRequest. #
+            noqa: E501
         :type: str
         """
         if owner_slug is None:
@@ -104,7 +116,7 @@ class ModelNewRequest(object):
 
     @property
     def slug(self):
-        """Gets the slug of this ModelNewRequest.  # noqa: E501
+        """Gets the slug of this ModelNewRequest.  # noqa: E501.
 
         The slug that the model should be created with  # noqa: E501
 
@@ -129,7 +141,7 @@ class ModelNewRequest(object):
 
     @property
     def title(self):
-        """Gets the title of this ModelNewRequest.  # noqa: E501
+        """Gets the title of this ModelNewRequest.  # noqa: E501.
 
         The title of the new model  # noqa: E501
 
@@ -154,7 +166,7 @@ class ModelNewRequest(object):
 
     @property
     def subtitle(self):
-        """Gets the subtitle of this ModelNewRequest.  # noqa: E501
+        """Gets the subtitle of this ModelNewRequest.  # noqa: E501.
 
         The subtitle of the new model  # noqa: E501
 
@@ -169,7 +181,8 @@ class ModelNewRequest(object):
 
         The subtitle of the new model  # noqa: E501
 
-        :param subtitle: The subtitle of this ModelNewRequest.  # noqa: E501
+        :param subtitle: The subtitle of this ModelNewRequest. # noqa:
+            E501
         :type: str
         """
 
@@ -177,7 +190,7 @@ class ModelNewRequest(object):
 
     @property
     def is_private(self):
-        """Gets the is_private of this ModelNewRequest.  # noqa: E501
+        """Gets the is_private of this ModelNewRequest.  # noqa: E501.
 
         Whether or not the model should be private  # noqa: E501
 
@@ -192,7 +205,8 @@ class ModelNewRequest(object):
 
         Whether or not the model should be private  # noqa: E501
 
-        :param is_private: The is_private of this ModelNewRequest.  # noqa: E501
+        :param is_private: The is_private of this ModelNewRequest. #
+            noqa: E501
         :type: bool
         """
         if is_private is None:
@@ -202,7 +216,7 @@ class ModelNewRequest(object):
 
     @property
     def description(self):
-        """Gets the description of this ModelNewRequest.  # noqa: E501
+        """Gets the description of this ModelNewRequest.  # noqa: E501.
 
         The description to be set on the model  # noqa: E501
 
@@ -217,7 +231,8 @@ class ModelNewRequest(object):
 
         The description to be set on the model  # noqa: E501
 
-        :param description: The description of this ModelNewRequest.  # noqa: E501
+        :param description: The description of this ModelNewRequest. #
+            noqa: E501
         :type: str
         """
 
@@ -225,7 +240,7 @@ class ModelNewRequest(object):
 
     @property
     def publish_time(self):
-        """Gets the publish_time of this ModelNewRequest.  # noqa: E501
+        """Gets the publish_time of this ModelNewRequest.  # noqa: E501.
 
         When the model was initially published  # noqa: E501
 
@@ -240,7 +255,8 @@ class ModelNewRequest(object):
 
         When the model was initially published  # noqa: E501
 
-        :param publish_time: The publish_time of this ModelNewRequest.  # noqa: E501
+        :param publish_time: The publish_time of this ModelNewRequest. #
+            noqa: E501
         :type: date
         """
 
@@ -248,11 +264,12 @@ class ModelNewRequest(object):
 
     @property
     def provenance_sources(self):
-        """Gets the provenance_sources of this ModelNewRequest.  # noqa: E501
+        """Gets the provenance_sources of this ModelNewRequest.  # noqa: E501.
 
         The provenance sources to be set on the model  # noqa: E501
 
-        :return: The provenance_sources of this ModelNewRequest.  # noqa: E501
+        :return: The provenance_sources of this ModelNewRequest. #
+            noqa: E501
         :rtype: str
         """
         return self._provenance_sources
@@ -263,38 +280,37 @@ class ModelNewRequest(object):
 
         The provenance sources to be set on the model  # noqa: E501
 
-        :param provenance_sources: The provenance_sources of this ModelNewRequest.  # noqa: E501
+        :param provenance_sources: The provenance_sources of this
+            ModelNewRequest. # noqa: E501
         :type: str
         """
 
         self._provenance_sources = provenance_sources
 
     def to_dict(self):
-        """Returns the model properties as a dict"""
+        """Returns the model properties as a dict."""
         result = {}
 
         for attr, _ in six.iteritems(self.project_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value))
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict()) if hasattr(item[1], "to_dict") else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 
         return result
 
     def to_str(self):
-        """Returns the string representation of the model"""
+        """Returns the string representation of the model."""
         return pprint.pformat(self.to_dict())
 
     def __repr__(self):
@@ -302,13 +318,12 @@ class ModelNewRequest(object):
         return self.to_str()
 
     def __eq__(self, other):
-        """Returns true if both objects are equal"""
+        """Returns true if both objects are equal."""
         if not isinstance(other, ModelNewRequest):
             return False
 
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):
-        """Returns true if both objects are not equal"""
+        """Returns true if both objects are not equal."""
         return not self == other
-

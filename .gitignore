@@ -15,6 +15,10 @@ dist/
 downloads/
 eggs/
 .eggs/
+kaggle
+kagglesdk
+!*/kaggle/
+!*/kagglesdk/
 lib/
 lib64/
 parts/
@@ -65,3 +69,7 @@ target/
 
 # Rider/IntelliJ
 .idea/
+
+# Gemini
+GEMINI.md
+.gemini

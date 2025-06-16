@@ -32,15 +32,10 @@ class ModelInstanceNewVersionRequest(object):
       attribute_map (dict): The key is attribute name
                             and the value is json key in definition.
     """
-    project_types = {
-        'version_notes': 'str',
-        'files': 'list[UploadFile]'
-    }
 
-    attribute_map = {
-        'version_notes': 'versionNotes',
-        'files': 'files'
-    }
+    project_types = {"version_notes": "str", "files": "list[UploadFile]"}
+
+    attribute_map = {"version_notes": "versionNotes", "files": "files"}
 
     def __init__(self, version_notes=None, files=None):  # noqa: E501
 
@@ -54,11 +49,13 @@ class ModelInstanceNewVersionRequest(object):
 
     @property
     def version_notes(self):
-        """Gets the version_notes of this ModelInstanceNewVersionRequest.  # noqa: E501
+        """Gets the version_notes of this ModelInstanceNewVersionRequest.  #
+        noqa: E501.
 
         The version notes for the model instance version  # noqa: E501
 
-        :return: The version_notes of this ModelInstanceNewVersionRequest.  # noqa: E501
+        :return: The version_notes of this
+            ModelInstanceNewVersionRequest. # noqa: E501
         :rtype: str
         """
         return self._version_notes
@@ -69,7 +66,8 @@ class ModelInstanceNewVersionRequest(object):
 
         The version notes for the model instance version  # noqa: E501
 
-        :param version_notes: The version_notes of this ModelInstanceNewVersionRequest.  # noqa: E501
+        :param version_notes: The version_notes of this
+            ModelInstanceNewVersionRequest. # noqa: E501
         :type: str
         """
 
@@ -77,11 +75,14 @@ class ModelInstanceNewVersionRequest(object):
 
     @property
     def files(self):
-        """Gets the files of this ModelInstanceNewVersionRequest.  # noqa: E501
+        """Gets the files of this ModelInstanceNewVersionRequest.  # noqa:
+        E501.
 
-        A list of files that should be associated with the model instance version  # noqa: E501
+        A list of files that should be associated with the model
+        instance version  # noqa: E501
 
-        :return: The files of this ModelInstanceNewVersionRequest.  # noqa: E501
+        :return: The files of this ModelInstanceNewVersionRequest. #
+            noqa: E501
         :rtype: list[UploadFile]
         """
         return self._files
@@ -90,9 +91,11 @@ class ModelInstanceNewVersionRequest(object):
     def files(self, files):
         """Sets the files of this ModelInstanceNewVersionRequest.
 
-        A list of files that should be associated with the model instance version  # noqa: E501
+        A list of files that should be associated with the model
+        instance version  # noqa: E501
 
-        :param files: The files of this ModelInstanceNewVersionRequest.  # noqa: E501
+        :param files: The files of this ModelInstanceNewVersionRequest.
+            # noqa: E501
         :type: list[UploadFile]
         """
         if files is None:
@@ -101,31 +104,29 @@ class ModelInstanceNewVersionRequest(object):
         self._files = files
 
     def to_dict(self):
-        """Returns the model properties as a dict"""
+        """Returns the model properties as a dict."""
         result = {}
 
         for attr, _ in six.iteritems(self.project_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value))
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict()) if hasattr(item[1], "to_dict") else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 
         return result
 
     def to_str(self):
-        """Returns the string representation of the model"""
+        """Returns the string representation of the model."""
         return pprint.pformat(self.to_dict())
 
     def __repr__(self):
@@ -133,13 +134,12 @@ class ModelInstanceNewVersionRequest(object):
         return self.to_str()
 
     def __eq__(self, other):
-        """Returns true if both objects are equal"""
+        """Returns true if both objects are equal."""
         if not isinstance(other, ModelInstanceNewVersionRequest):
             return False
 
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):
-        """Returns true if both objects are not equal"""
+        """Returns true if both objects are not equal."""
         return not self == other
-

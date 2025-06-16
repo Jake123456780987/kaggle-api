@@ -260,7 +260,7 @@ optional arguments:
   --sort-by SORT_BY     Sort list results. Default is 'hottest'. Valid options are 'hottest', 'votes', 'updated', and 'active'
   --max-size MAX_SIZE   Specify the maximum size of the dataset to return (bytes)
   --min-size MIN_SIZE   Specify the minimum size of the dataset to return (bytes)
-  --file-type FILE_TYPE Search for datasets with a specific file type. Default is 'all'. Valid options are 'all', 'csv', 'sqlite', 'json', and 'bigQuery'. Please note that bigQuery datasets cannot be downloaded
+  --file-type FILE_TYPE Search for datasets with a specific file type. Default is 'all'. Valid options are 'all', 'csv', 'sqlite', 'json', 'parquet', and 'bigQuery'. Please note that bigQuery datasets cannot be downloaded
   --license LICENSE_NAME 
                         Search for datasets with a specific license. Default is 'all'. Valid options are 'all', 'cc', 'gpl', 'odb', and 'other'
   --tags TAG_IDS        Search for datasets that have specific tags. Tag list should be comma separated                      
@@ -428,6 +428,22 @@ Example:
 
 `kaggle datasets status zillow/zecon`
 
+##### Delete a dataset
+
+```
+usage: kaggle datasets delete [-y] [-h] [dataset]
+
+required arguments:
+  dataset     Dataset URL suffix in format <owner>/<dataset-name> (use "kaggle datasets list" to show options)
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -ym --yes   Sets any confirmation values to "yes" automatically. Users will not be asked to confirm.
+```
+
+Example:
+
+`kaggle datasets delete -y lastplacelarry/testdataset`
 
 ### Kernels
 
@@ -440,14 +456,33 @@ optional arguments:
   -h, --help            show this help message and exit
 
 commands:
-  {list,init,push,pull,output,status}
+  {get,list,init,push,pull,output,status}
+    get                 Get the code for a kernel (formerly pull)
     list                List available kernels
     init                Initialize metadata file for a kernel
-    push                Push new code to a kernel and run the kernel
-    pull                Pull down code from a kernel
+    push                Deprecated by update: Push new code to a kernel and run the kernel
+    pull                Deprecated by get: Pull down code from a kernel
     output              Get data output from the latest kernel run
+    update              Update a kernel with new code and run it (formerly push)
     status              Display the status of the latest kernel run
 ```
+
+##### Get a kernel
+
+```
+usage: kaggle kernels get [-h] [-p PATH] [-w] [-m] [kernel]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  kernel                Kernel URL suffix in format <owner>/<kernel-name> (use "kaggle kernels list" to show options)
+  -p PATH, --path PATH  Folder where file(s) will be downloaded, defaults to current working directory
+  -w, --wp              Download files to current working path
+  -m, --metadata        Generate metadata when pulling kernel
+```
+
+Example:
+
+`kaggle kernels get rtatman/list-of-5-day-challenges -p /path/to/dest`
 
 ##### List kernels
 
@@ -500,8 +535,8 @@ optional arguments:
 Example:
 
 `kaggle kernels init -p /path/to/folder`
-  
-##### Push a kernel
+
+##### Push a kernel (deprecated, use update)
 
 ```
 usage: kaggle kernels push [-h] -p FOLDER
@@ -518,7 +553,7 @@ Example:
 
 `kaggle kernels push -p /path/to/folder`
 
-##### Pull a kernel
+##### Pull a kernel (deprecated, use get)
 
 ```
 usage: kaggle kernels pull [-h] [-p PATH] [-w] [-m] [kernel]
@@ -554,6 +589,27 @@ optional arguments:
 Example:
 
 `kaggle kernels output mrisdal/exploring-survival-on-the-titanic -p /path/to/dest`
+
+##### Update a kernel
+
+```
+usage: kaggle kernels update [-h] -p FOLDER
+
+This command should only be used after "get". Use "create" to create a new kernel.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -t N, --timeout N     Limit the run time of a kernel to the given number  of seconds.
+                        The global maximum time will not be exceeded.
+  -p FOLDER, --path FOLDER
+                        Folder for upload, containing data files and a special kernel-metadata.json file
+                        (https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata).
+                        Defaults to current working directory
+```
+
+Example:
+
+`kaggle kernels update -p /path/to/folder`
 
 ##### Get the status of the latest kernel run
 

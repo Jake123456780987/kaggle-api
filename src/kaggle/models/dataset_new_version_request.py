@@ -33,27 +33,37 @@ class DatasetNewVersionRequest(object):
       attribute_map (dict): The key is attribute name
                             and the value is json key in definition.
     """
+
     project_types = {
-        'version_notes': 'str',
-        'subtitle': 'str',
-        'description': 'str',
-        'files': 'list[UploadFile]',
-        'convert_to_csv': 'bool',
-        'category_ids': 'list[str]',
-        'delete_old_versions': 'bool'
+        "version_notes": "str",
+        "subtitle": "str",
+        "description": "str",
+        "files": "list[UploadFile]",
+        "convert_to_csv": "bool",
+        "category_ids": "list[str]",
+        "delete_old_versions": "bool",
     }
 
     attribute_map = {
-        'version_notes': 'versionNotes',
-        'subtitle': 'subtitle',
-        'description': 'description',
-        'files': 'files',
-        'convert_to_csv': 'convertToCsv',
-        'category_ids': 'categoryIds',
-        'delete_old_versions': 'deleteOldVersions'
+        "version_notes": "versionNotes",
+        "subtitle": "subtitle",
+        "description": "description",
+        "files": "files",
+        "convert_to_csv": "convertToCsv",
+        "category_ids": "categoryIds",
+        "delete_old_versions": "deleteOldVersions",
     }
 
-    def __init__(self, version_notes=None, subtitle=None, description=None, files=None, convert_to_csv=True, category_ids=None, delete_old_versions=False):  # noqa: E501
+    def __init__(
+        self,
+        version_notes=None,
+        subtitle=None,
+        description=None,
+        files=None,
+        convert_to_csv=True,
+        category_ids=None,
+        delete_old_versions=False,
+    ):  # noqa: E501
 
         self._version_notes = None
         self._subtitle = None
@@ -79,11 +89,13 @@ class DatasetNewVersionRequest(object):
 
     @property
     def version_notes(self):
-        """Gets the version_notes of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the version_notes of this DatasetNewVersionRequest.  # noqa:
+        E501.
 
         The version notes for the new dataset version  # noqa: E501
 
-        :return: The version_notes of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The version_notes of this DatasetNewVersionRequest. #
+            noqa: E501
         :rtype: str
         """
         return self._version_notes
@@ -94,7 +106,8 @@ class DatasetNewVersionRequest(object):
 
         The version notes for the new dataset version  # noqa: E501
 
-        :param version_notes: The version_notes of this DatasetNewVersionRequest.  # noqa: E501
+        :param version_notes: The version_notes of this
+            DatasetNewVersionRequest. # noqa: E501
         :type: str
         """
         if version_notes is None:
@@ -104,11 +117,12 @@ class DatasetNewVersionRequest(object):
 
     @property
     def subtitle(self):
-        """Gets the subtitle of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the subtitle of this DatasetNewVersionRequest.  # noqa: E501.
 
         The subtitle to set on the dataset  # noqa: E501
 
-        :return: The subtitle of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The subtitle of this DatasetNewVersionRequest. # noqa:
+            E501
         :rtype: str
         """
         return self._subtitle
@@ -119,7 +133,8 @@ class DatasetNewVersionRequest(object):
 
         The subtitle to set on the dataset  # noqa: E501
 
-        :param subtitle: The subtitle of this DatasetNewVersionRequest.  # noqa: E501
+        :param subtitle: The subtitle of this DatasetNewVersionRequest.
+            # noqa: E501
         :type: str
         """
 
@@ -127,11 +142,13 @@ class DatasetNewVersionRequest(object):
 
     @property
     def description(self):
-        """Gets the description of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the description of this DatasetNewVersionRequest.  # noqa:
+        E501.
 
         The description to set on the dataset  # noqa: E501
 
-        :return: The description of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The description of this DatasetNewVersionRequest. #
+            noqa: E501
         :rtype: str
         """
         return self._description
@@ -142,7 +159,8 @@ class DatasetNewVersionRequest(object):
 
         The description to set on the dataset  # noqa: E501
 
-        :param description: The description of this DatasetNewVersionRequest.  # noqa: E501
+        :param description: The description of this
+            DatasetNewVersionRequest. # noqa: E501
         :type: str
         """
 
@@ -150,11 +168,13 @@ class DatasetNewVersionRequest(object):
 
     @property
     def files(self):
-        """Gets the files of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the files of this DatasetNewVersionRequest.  # noqa: E501.
 
-        A list of files that should be associated with the dataset  # noqa: E501
+        A list of files that should be associated with the dataset  #
+        noqa: E501
 
-        :return: The files of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The files of this DatasetNewVersionRequest. # noqa:
+            E501
         :rtype: list[UploadFile]
         """
         return self._files
@@ -163,9 +183,11 @@ class DatasetNewVersionRequest(object):
     def files(self, files):
         """Sets the files of this DatasetNewVersionRequest.
 
-        A list of files that should be associated with the dataset  # noqa: E501
+        A list of files that should be associated with the dataset  #
+        noqa: E501
 
-        :param files: The files of this DatasetNewVersionRequest.  # noqa: E501
+        :param files: The files of this DatasetNewVersionRequest. #
+            noqa: E501
         :type: list[UploadFile]
         """
         if files is None:
@@ -175,11 +197,14 @@ class DatasetNewVersionRequest(object):
 
     @property
     def convert_to_csv(self):
-        """Gets the convert_to_csv of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the convert_to_csv of this DatasetNewVersionRequest.  # noqa:
+        E501.
 
-        Whether or not a tabular dataset should be converted to csv  # noqa: E501
+        Whether or not a tabular dataset should be converted to csv  #
+        noqa: E501
 
-        :return: The convert_to_csv of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The convert_to_csv of this DatasetNewVersionRequest. #
+            noqa: E501
         :rtype: bool
         """
         return self._convert_to_csv
@@ -188,9 +213,11 @@ class DatasetNewVersionRequest(object):
     def convert_to_csv(self, convert_to_csv):
         """Sets the convert_to_csv of this DatasetNewVersionRequest.
 
-        Whether or not a tabular dataset should be converted to csv  # noqa: E501
+        Whether or not a tabular dataset should be converted to csv  #
+        noqa: E501
 
-        :param convert_to_csv: The convert_to_csv of this DatasetNewVersionRequest.  # noqa: E501
+        :param convert_to_csv: The convert_to_csv of this
+            DatasetNewVersionRequest. # noqa: E501
         :type: bool
         """
 
@@ -198,11 +225,13 @@ class DatasetNewVersionRequest(object):
 
     @property
     def category_ids(self):
-        """Gets the category_ids of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the category_ids of this DatasetNewVersionRequest.  # noqa:
+        E501.
 
         A list of tag IDs to associated with the dataset  # noqa: E501
 
-        :return: The category_ids of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The category_ids of this DatasetNewVersionRequest. #
+            noqa: E501
         :rtype: list[str]
         """
         return self._category_ids
@@ -213,7 +242,8 @@ class DatasetNewVersionRequest(object):
 
         A list of tag IDs to associated with the dataset  # noqa: E501
 
-        :param category_ids: The category_ids of this DatasetNewVersionRequest.  # noqa: E501
+        :param category_ids: The category_ids of this
+            DatasetNewVersionRequest. # noqa: E501
         :type: list[str]
         """
 
@@ -221,11 +251,14 @@ class DatasetNewVersionRequest(object):
 
     @property
     def delete_old_versions(self):
-        """Gets the delete_old_versions of this DatasetNewVersionRequest.  # noqa: E501
+        """Gets the delete_old_versions of this DatasetNewVersionRequest.  #
+        noqa: E501.
 
-        Whether or not all previous versions of the dataset should be deleted upon creating the new version  # noqa: E501
+        Whether or not all previous versions of the dataset should be
+        deleted upon creating the new version  # noqa: E501
 
-        :return: The delete_old_versions of this DatasetNewVersionRequest.  # noqa: E501
+        :return: The delete_old_versions of this
+            DatasetNewVersionRequest. # noqa: E501
         :rtype: bool
         """
         return self._delete_old_versions
@@ -234,40 +267,40 @@ class DatasetNewVersionRequest(object):
     def delete_old_versions(self, delete_old_versions):
         """Sets the delete_old_versions of this DatasetNewVersionRequest.
 
-        Whether or not all previous versions of the dataset should be deleted upon creating the new version  # noqa: E501
+        Whether or not all previous versions of the dataset should be
+        deleted upon creating the new version  # noqa: E501
 
-        :param delete_old_versions: The delete_old_versions of this DatasetNewVersionRequest.  # noqa: E501
+        :param delete_old_versions: The delete_old_versions of this
+            DatasetNewVersionRequest. # noqa: E501
         :type: bool
         """
 
         self._delete_old_versions = delete_old_versions
 
     def to_dict(self):
-        """Returns the model properties as a dict"""
+        """Returns the model properties as a dict."""
         result = {}
 
         for attr, _ in six.iteritems(self.project_types):
             value = getattr(self, attr)
             if isinstance(value, list):
-                result[attr] = list(map(
-                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                    value
-                ))
+                result[attr] = list(map(lambda x: x.to_dict() if hasattr(x, "to_dict") else x, value))
             elif hasattr(value, "to_dict"):
                 result[attr] = value.to_dict()
             elif isinstance(value, dict):
-                result[attr] = dict(map(
-                    lambda item: (item[0], item[1].to_dict())
-                    if hasattr(item[1], "to_dict") else item,
-                    value.items()
-                ))
+                result[attr] = dict(
+                    map(
+                        lambda item: (item[0], item[1].to_dict()) if hasattr(item[1], "to_dict") else item,
+                        value.items(),
+                    )
+                )
             else:
                 result[attr] = value
 
         return result
 
     def to_str(self):
-        """Returns the string representation of the model"""
+        """Returns the string representation of the model."""
         return pprint.pformat(self.to_dict())
 
     def __repr__(self):
@@ -275,13 +308,12 @@ class DatasetNewVersionRequest(object):
         return self.to_str()
 
     def __eq__(self, other):
-        """Returns true if both objects are equal"""
+        """Returns true if both objects are equal."""
         if not isinstance(other, DatasetNewVersionRequest):
             return False
 
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):
-        """Returns true if both objects are not equal"""
+        """Returns true if both objects are not equal."""
         return not self == other
-
